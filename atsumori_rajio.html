@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Atsumori Rajio by CH0KCHA1</title>
+    <link rel="shortcut icon" href="assets/images/radio.png"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/plyr.css"/>
+
+</head>
+<body style="background: url('assets/images/bg02.jpg') repeat;">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8">
+            <div class="card mt-2">
+                <div class="card-body">
+                    <h1 class="card-title">
+                        Atsumori Rajio
+                    </h1>
+                    <div class="card-text">
+                        Current Time : <span id="current_time"></span>
+                    </div>
+
+                    <!-- iOS Player -->
+                    <div id="player_ios_div">
+
+                        <div class="mt-3">
+                            <img src="assets/images/image01.jpg" class="img-fluid rounded"/>
+                        </div>
+
+                        <hr class="mt-4"/>
+
+                        <div class="plyr__video-embed" id="player_ios"
+                             style="height: 45px !important;">
+                            <iframe
+                                    src="https://player.vimeo.com/video/415440066?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+                                    allowfullscreen
+                                    allowtransparency
+                                    allow="autoplay"
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <div id="player_div">
+
+                        <div class="text-center my-3">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-4">
+
+                                    <img id="image_version" class="img-fluid rounded mb-3 mb-sm-0"
+                                         style="max-height: 200px;"
+                                         src="assets/bgm/Animal%20Crossing%20New%20Horizons%20Original%20Soundtrack/Cover.jpg"/>
+
+                                </div>
+                                <div class="col-sm-8">
+
+                                    <select name="bgm_version" id="bgm_version" class="form-control">
+                                        <option value="new_horizon">New Horizon</option>
+                                        <option value="new_horizon_rainy">New Horizon (Rain)</option>
+                                        <option value="new_horizon_snowy">New Horizon (Snow)</option>
+                                        <option value="new_horizon_island">New Horizon : Island Tour</option>
+                                        <option value="new_horizon_island_rainy">New Horizon : Island Tour (Rain)
+                                        </option>
+                                        <option value="new_horizon_island_snowy">New Horizon : Island Tour (Snow)
+                                        </option>
+                                        <option value="new_leaf">New Leaf</option>
+                                        <option value="new_leaf_rainy">New Leaf (Rain)</option>
+                                        <option value="new_leaf_snowy">New Leaf (Snow)</option>
+                                        <option value="wild_world">Wild World</option>
+                                        <option value="original">Original</option>
+                                        <option value="original_cherry">Original (Cherry)</option>
+                                        <option value="original_winter">Original (Winter)</option>
+                                    </select>
+
+                                    <hr class="mt-3"/>
+
+                                    <audio id="player" controls loop>
+                                        <source src="assets/bgm/Animal%20Crossing%20New%20Horizons%20Original%20Soundtrack/Disc%201/1.01%20Welcome%20Horizons.mp3"
+                                                type="audio/mp3"/>
+                                    </audio>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="fx">
+                            <hr class="mt-3"/>
+                            <strong>Effect</strong>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="rounded border mt-2 p-2">
+                                        <div>Rain</div>
+                                        <audio class="fx-player" controls loop>
+                                            <source src="assets/fx/rain.mp3" type="audio/mp3"/>
+                                        </audio>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="rounded border mt-2 p-2">
+                                        <div>Rain Storm</div>
+                                        <audio class="fx-player" controls loop>
+                                            <source src="assets/fx/rain_storm.mp3" type="audio/mp3"/>
+                                        </audio>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="rounded border mt-2 p-2">
+                                        <div>Wave</div>
+                                        <audio class="fx-player" controls loop>
+                                            <source src="assets/fx/wave.mp3" type="audio/mp3"/>
+                                        </audio>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="rounded border mt-2 p-2">
+                                        <div>Snow</div>
+                                        <audio class="fx-player" controls loop>
+                                            <source src="assets/fx/snow.mp3" type="audio/mp3"/>
+                                        </audio>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="rounded border mt-2 p-2">
+                                        <div>Wind</div>
+                                        <audio class="fx-player" controls loop>
+                                            <source src="assets/fx/wind.mp3" type="audio/mp3"/>
+                                        </audio>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="rounded border mt-2 p-2">
+                                        <div>Wind Storm</div>
+                                        <audio class="fx-player" controls loop>
+                                            <source src="assets/fx/wind_storm.mp3" type="audio/mp3"/>
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-2 text-center small">
+        BGM credits :
+        <a href="https://www.sittingonclouds.net/" class="text-dark">sitting on clouds</a>
+        <br/>
+        Effect credits :
+        <a href="https://www.youtube.com/channel/UCKBpKeRhhCQOQwbPz4aYZWg" class="text-dark">relaxing sounds of
+            nature</a>
+        <br/>
+        Powered by :
+        <a href="https://github.com/chokchai/atsumori_rajio/" class="text-dark"><u>CH0KCHA1</u></a>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+<script src="assets/js/plyr.polyfilled.js"></script>
+<script src="assets/js/moment.min.js"></script>
+
+<!-- Script -->
+<script>
+
+    jQuery(function ($) {
+
+        // =============================================================================================== //
+        //  VARS
+        // =============================================================================================== //
+
+        // global
+        let player;
+        let bgmList;
+        let currentBgm;
+        let $current_time = $('#current_time');
+        let $player_div = $('#player_div');
+        let $player_ios_div = $('#player_ios_div');
+
+        // =============================================================================================== //
+        //  MAIN
+        // =============================================================================================== //
+
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+            // ios
+            initPlayerIOS();
+            $player_div.remove();
+        } else {
+            // other
+            initPlayer();
+            $player_ios_div.remove();
+        }
+
+        // clock
+        (function clock() {
+            $current_time.html(moment().format("h:mm:ss A"));
+            setTimeout(clock, 1000);
+        })();
+
+        // =============================================================================================== //
+        //  METHOD
+        // =============================================================================================== //
+
+        function initPlayer() {
+
+            player = new Plyr('#player', {
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+                invertTime: false,
+                hideControls: false,
+                volume: 0.8,
+            });
+
+            bgmList = getNewHorizonBgmList();
+
+            player.on('timeupdate ready', function () {
+
+                let hour = parseInt(moment().hour());
+                let bgm = bgmList[hour];
+
+                // bgm change ?
+                if (currentBgm !== bgm) {
+
+                    currentBgm = bgm;
+
+                    player.source = {
+                        type: 'audio',
+                        sources: [{src: bgm, type: 'audio/mp3'}],
+                    };
+
+                    player.play();
+                }
+            });
+
+            // init effect
+            Plyr.setup('.fx-player', {
+                controls: ['play', 'current-time', 'mute', 'volume'],
+                invertTime: false,
+                hideControls: false,
+                volume: 0.5,
+            });
+
+            // menus
+            $('#bgm_version').on('change', function () {
+
+                let value = $(this).val();
+                let $image_version = $('#image_version');
+
+                if (value === 'new_horizon') {
+
+                    bgmList = getNewHorizonBgmList();
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'new_horizon_rainy') {
+
+                    bgmList = getNewHorizonBgmList('rainy');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'new_horizon_snowy') {
+
+                    bgmList = getNewHorizonBgmList('snowy');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'new_horizon_island') {
+
+                    bgmList = getNewHorizonIslandTourBgmList();
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'new_horizon_island_rainy') {
+
+                    bgmList = getNewHorizonIslandTourBgmList('rainy');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'new_horizon_island_snowy') {
+
+                    bgmList = getNewHorizonIslandTourBgmList('snowy');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'new_leaf') {
+
+                    bgmList = getNewLeafBgmList();
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Leaf Original Soundtrack/Cover.png');
+
+                } else if (value === 'new_leaf_rainy') {
+
+                    bgmList = getNewLeafBgmList('rainy');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Leaf Original Soundtrack/Cover.png');
+
+                } else if (value === 'new_leaf_snowy') {
+
+                    bgmList = getNewLeafBgmList('snowy');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing New Leaf Original Soundtrack/Cover.png');
+
+                } else if (value === 'wild_world') {
+
+                    bgmList = getWildWorldBgmList();
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing Wild World Original Soundtrack/Cover.png');
+
+                } else if (value === 'original') {
+
+                    bgmList = getOriginalBgmList();
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'original_winter') {
+
+                    bgmList = getOriginalBgmList('winter');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing Original Soundtrack/Cover.jpg');
+
+                } else if (value === 'original_cherry') {
+
+                    bgmList = getOriginalBgmList('cherry');
+                    $image_version.attr('src', 'assets/bgm/Animal Crossing Original Soundtrack/Cover.jpg');
+
+                }
+
+            });
+
+        }
+
+        function initPlayerIOS() {
+            // time format : 10 min 10 sec => 1010
+            const bgm_times = [
+                4804,   // 0
+                5044,   // 1
+                5314,   // 2
+                5544,   // 3
+                5744,   // 4
+                0,      // 5
+                317,    // 6
+                546,    // 7
+                834,    // 8
+                1115,   // 9
+                1324,   // 10
+                1606,   // 11
+                1904,   // 12
+                2132,   // 13
+                2348,   // 14
+                2641,   // 15
+                2853,   // 16
+                3110,   // 17
+                3348,   // 18
+                3558,   // 19
+                3835,   // 20
+                4040,   // 21
+                4255,   // 22
+                4522,   // 23
+            ];
+
+            // convert time to secs
+            $.each(bgm_times, function (index, value) {
+                bgm_times[index] = (parseInt(value / 100) * 60) + (value % 100)
+            });
+
+            player = new Plyr('#player_ios', {
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+                invertTime: false,
+                hideControls: false,
+            });
+
+            player.on('timeupdate', function (event) {
+
+                let plyrCurrentTime = parseInt(event.detail.plyr.currentTime);
+                let now = moment();
+                let hour = parseInt(now.hour());
+
+                let start = bgm_times[hour];
+                let end = bgm_times[hour < 23 ? hour + 1 : 0] - 2;
+
+                // manual set end when 4am
+                if (hour === 4) {
+                    end = (60 * 60) - 2;
+                }
+
+                if (plyrCurrentTime < start || plyrCurrentTime > end) {
+                    player.currentTime = start;
+                }
+
+            });
+
+        }
+
+        function getNewHorizonBgmList(weather = 'sunny') {
+            let dir = 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Disc 1/';
+
+            let bgm = {
+                'sunny': [
+                    '1.20 12-00 p.m. (Sunny)', '1.21 1-00 a.m. (Sunny)', '1.22 2-00 a.m. (Sunny)', '1.23 3-00 a.m. (Sunny)',
+                    '1.24 4-00 a.m. (Sunny)', '1.25 5-00 a.m. (Sunny)', '1.02 6-00 a.m. (Sunny)', '1.03 7-00 a.m. (Sunny)',
+                    '1.04 8-00 a.m. (Sunny)', '1.05 9-00 a.m. (Sunny)', '1.06 10-00 a.m. (Sunny)', '1.07 11-00 a.m. (Sunny)',
+                    '1.08 12-00 a.m. (Sunny)', '1.09 1-00 p.m. (Sunny)', '1.10 2-00 p.m. (Sunny)', '1.11 3-00 p.m. (Sunny)',
+                    '1.12 4-00 p.m. (Sunny)', '1.13 5-00 p.m. (Sunny)', '1.14 6-00 p.m. (Sunny)', '1.15 7-00 p.m. (Sunny)',
+                    '1.16 8-00 p.m. (Sunny)', '1.17 9-00 p.m. (Sunny)', '1.18 10-00 p.m. (Sunny)', '1.19 11-00 p.m. (Sunny)',
+                ],
+                'rainy': [
+                    '1.44 12-00 p.m. (Rainy)', '1.45 1-00 a.m. (Rainy)', '1.46 2-00 a.m. (Rainy)', '1.47 3-00 a.m. (Rainy)',
+                    '1.48 4-00 a.m. (Rainy)', '1.49 5-00 a.m. (Rainy)', '1.26 6-00 a.m. (Rainy)', '1.27 7-00 a.m. (Rainy)',
+                    '1.28 8-00 a.m. (Rainy)', '1.29 9-00 a.m. (Rainy)', '1.30 10-00 a.m. (Rainy)', '1.31 11-00 a.m. (Rainy)',
+                    '1.32 12-00 a.m. (Rainy)', '1.33 1-00 p.m. (Rainy)', '1.34 2-00 p.m. (Rainy)', '1.35 3-00 p.m. (Rainy)',
+                    '1.36 4-00 p.m. (Rainy)', '1.37 5-00 p.m. (Rainy)', '1.38 6-00 p.m. (Rainy)', '1.39 7-00 p.m. (Rainy)',
+                    '1.40 8-00 p.m. (Rainy)', '1.41 9-00 p.m. (Rainy)', '1.42 10-00 p.m. (Rainy)', '1.43 11-00 p.m. (Rainy)',
+                ],
+                'snowy': [
+                    '1.68 12-00 p.m. (Snowy)', '1.69 1-00 a.m. (Snowy)', '1.70 2-00 a.m. (Snowy)', '1.71 3-00 a.m. (Snowy)',
+                    '1.72 4-00 a.m. (Snowy)', '1.73 5-00 a.m. (Snowy)', '1.50 6-00 a.m. (Snowy)', '1.51 7-00 a.m. (Snowy)',
+                    '1.52 8-00 a.m. (Snowy)', '1.53 9-00 a.m. (Snowy)', '1.54 10-00 a.m. (Snowy)', '1.55 11-00 a.m. (Snowy)',
+                    '1.56 12-00 a.m. (Snowy)', '1.57 1-00 p.m. (Snowy)', '1.58 2-00 p.m. (Snowy)', '1.59 3-00 p.m. (Snowy)',
+                    '1.60 4-00 p.m. (Snowy)', '1.61 5-00 p.m. (Snowy)', '1.62 6-00 p.m. (Snowy)', '1.63 7-00 p.m. (Snowy)',
+                    '1.64 8-00 p.m. (Snowy)', '1.65 9-00 p.m. (Snowy)', '1.66 10-00 p.m. (Snowy)', '1.67 11-00 p.m. (Snowy)',
+                ]
+            };
+
+            return parseBgmList(bgm[weather], dir);
+        }
+
+        function getNewHorizonIslandTourBgmList(weather = 'sunny') {
+            let dir = 'assets/bgm/Animal Crossing New Horizons Original Soundtrack/Disc 2/';
+
+            let bgm = {
+                'sunny': [
+                    '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)',
+                    '2.49 Island Tour (Night - Sunny)', '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)',
+                    '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)',
+                    '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)', '2.46 Island Tour (Day - Sunny)',
+                    '2.46 Island Tour (Day - Sunny)', '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)',
+                    '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)', '2.49 Island Tour (Night - Sunny)'
+                ],
+                'rainy': [
+                    '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)',
+                    '2.50 Island Tour (Night - Rainy)', '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)',
+                    '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)',
+                    '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)', '2.47 Island Tour (Day - Rainy)',
+                    '2.47 Island Tour (Day - Rainy)', '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)',
+                    '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)', '2.50 Island Tour (Night - Rainy)'
+                ],
+                'snowy': [
+                    '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)',
+                    '2.51 Island Tour (Night - Snowy)', '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)',
+                    '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)',
+                    '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)', '2.48 Island Tour (Day - Snowy)',
+                    '2.48 Island Tour (Day - Snowy)', '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)',
+                    '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)', '2.51 Island Tour (Night - Snowy)'
+                ],
+            };
+
+            return parseBgmList(bgm[weather], dir);
+        }
+
+        function getNewLeafBgmList(weather = 'sunny') {
+            let dir = 'assets/bgm/Animal Crossing New Leaf Original Soundtrack/Disc 1/';
+
+            let bgm = {
+                'sunny': [
+                    '39. Outdoors at 12 p.m. (Sunny)', '16. Outdoors at 1 a.m. (Sunny)', '17. Outdoors at 2 a.m. (Sunny)', '18. Outdoors at 3 a.m. (Sunny)',
+                    '19. Outdoors at 4 a.m. (Sunny)', '20. Outdoors at 5 a.m. (Sunny)', '21. Outdoors at 6 a.m. (Sunny)', '22. Outdoors at 7 a.m. (Sunny)',
+                    '23. Outdoors at 8 a.m. (Sunny)', '24. Outdoors at 9 a.m. (Sunny)', '25. Outdoors at 10 a.m. (Sunny)', '26. Outdoors at 11 a.m. (Sunny)',
+                    '27. Outdoors at 12 a.m. (Sunny)', '28. Outdoors at 1 p.m. (Sunny)', '29. Outdoors at 2 p.m. (Sunny)', '30. Outdoors at 3 p.m. (Sunny)',
+                    '31. Outdoors at 4 p.m. (Sunny)', '32. Outdoors at 5 p.m. (Sunny)', '33. Outdoors at 6 p.m. (Sunny)', '34. Outdoors at 7 p.m. (Sunny)',
+                    '35. Outdoors at 8 p.m. (Sunny)', '36. Outdoors at 9 p.m. (Sunny)', '37. Outdoors at 10 p.m. (Sunny)', '38. Outdoors at 11 p.m. (Sunny)',
+                ],
+                'rainy': [
+                    '63. Outdoors at 12 p.m. (Rainy)', '40. Outdoors at 1 a.m. (Rainy)', '41. Outdoors at 2 a.m. (Rainy)', '42. Outdoors at 3 a.m. (Rainy)',
+                    '43. Outdoors at 4 a.m. (Rainy)', '44. Outdoors at 5 a.m. (Rainy)', '45. Outdoors at 6 a.m. (Rainy)', '46. Outdoors at 7 a.m. (Rainy)',
+                    '47. Outdoors at 8 a.m. (Rainy)', '48. Outdoors at 9 a.m. (Rainy)', '49. Outdoors at 10 a.m. (Rainy)', '50. Outdoors at 11 a.m. (Rainy)',
+                    '51. Outdoors at 12 a.m. (Rainy)', '52. Outdoors at 1 p.m. (Rainy)', '53. Outdoors at 2 p.m. (Rainy)', '54. Outdoors at 3 p.m. (Rainy)',
+                    '55. Outdoors at 4 p.m. (Rainy)', '56. Outdoors at 5 p.m. (Rainy)', '57. Outdoors at 6 p.m. (Rainy)', '58. Outdoors at 7 p.m. (Rainy)',
+                    '59. Outdoors at 8 p.m. (Rainy)', '60. Outdoors at 9 p.m. (Rainy)', '61. Outdoors at 10 p.m. (Rainy)', '62. Outdoors at 11 p.m. (Rainy)'
+                ],
+                'snowy': [
+                    '87. Outdoors at 12 p.m. (Snowy)', '64. Outdoors at 1 a.m. (Snowy)', '65. Outdoors at 2 a.m. (Snowy)', '66. Outdoors at 3 a.m. (Snowy)',
+                    '67. Outdoors at 4 a.m. (Snowy)', '68. Outdoors at 5 a.m. (Snowy)', '69. Outdoors at 6 a.m. (Snowy)', '70. Outdoors at 7 a.m. (Snowy)',
+                    '71. Outdoors at 8 a.m. (Snowy)', '72. Outdoors at 9 a.m. (Snowy)', '73. Outdoors at 10 a.m. (Snowy)', '74. Outdoors at 11 a.m. (Snowy)',
+                    '75. Outdoors at 12 a.m. (Snowy)', '76. Outdoors at 1 p.m. (Snowy)', '77. Outdoors at 2 p.m. (Snowy)', '78. Outdoors at 3 p.m. (Snowy)',
+                    '79. Outdoors at 4 p.m. (Snowy)', '80. Outdoors at 5 p.m. (Snowy)', '81. Outdoors at 6 p.m. (Snowy)', '82. Outdoors at 7 p.m. (Snowy)',
+                    '83. Outdoors at 8 p.m. (Snowy)', '84. Outdoors at 9 p.m. (Snowy)', '85. Outdoors at 10 p.m. (Snowy)', '86. Outdoors at 11 p.m. (Snowy)',
+                ]
+            };
+
+            return parseBgmList(bgm[weather], dir);
+        }
+
+        function getWildWorldBgmList(weather = 'sunny') {
+            let dir = 'assets/bgm/Animal Crossing Wild World Original Soundtrack/';
+
+            let bgm = {
+                'sunny': [
+                    '55. 12 PM', '56. 1 AM', '57. 2 AM', '58. 3 AM',
+                    '59. 4 AM', '60. 5 AM', '37. 6 AM', '38. 7 AM',
+                    '39. 8 AM', '40. 9 AM', '41. 10 AM', '42. 11 AM',
+                    '43. 12 AM', '44. 1 PM', '45. 2 PM', '46. 3 PM',
+                    '47. 4 PM', '48. 5 PM', '49. 6 PM', '50. 7 PM',
+                    '51. 8 PM', '52. 9 PM', '53. 10 PM', '54. 11 PM',
+                ]
+            };
+
+            return parseBgmList(bgm[weather], dir);
+        }
+
+        function getOriginalBgmList(weather = 'sunny') {
+            let dir = 'assets/bgm/Animal Crossing Original Soundtrack/';
+
+            let bgm = {
+                'sunny': [
+                    '57. 12PM', '58. 1AM', '59. 2AM', '60. 3AM',
+                    '61. 4AM', '62. 5AM', '63. 6AM', '64. 7AM',
+                    '65. 8AM', '66. 9AM', '67. 10AM', '68. 11AM',
+                    '69. 12AM', '70. 1PM', '71. 2PM', '72. 3PM',
+                    '73. 4PM', '74. 5PM', '75. 6PM', '76. 7PM',
+                    '77. 8PM', '78. 9PM', '79. 10PM', '80. 11PM',
+                ],
+                'winter': [
+                    '194. 12AM (Winter)', '195. 1AM (Winter)', '196. 2AM (Winter)', '197. 3AM (Winter)',
+                    '198. 4AM (Winter)', '199. 5AM (Winter)', '200. 6AM (Winter)', '201. 7AM (Winter)',
+                    '202. 8AM (Winter)', '203. 9AM (Winter)', '204. 10AM (Winter)', '205. 11AM (Winter)',
+                    '206. 12PM (Winter)', '207. 1PM (Winter)', '208. 2PM (Winter)', '209. 3PM (Winter)',
+                    '210. 4PM (Winter)', '211. 5PM (Winter)', '212. 6PM (Winter)', '213. 7PM (Winter)',
+                    '214. 8PM (Winter)', '215. 9PM (Winter)', '216. 10PM (Winter)', '217. 11PM (Winter)',
+                ],
+                'cherry': [
+                    '218. 12AM (Cherry)', '219. 1AM (Cheery)', '220. 2AM (Cheery)', '221. 3AM (Cheery)',
+                    '222. 4AM (Cheery)', '223. 5AM (Cheery)', '224. 6AM (Cheery)', '225. 7AM (Cheery)',
+                    '226. 8AM (Cheery)', '227. 9AM (Cheery)', '228. 10AM (Cheery)', '229. 11AM (Cheery)',
+                    '230. 12PM (Cheery)', '231. 1PM (Cheery)', '232. 2PM (Cheery)', '233. 3PM (Cheery)',
+                    '234. 4PM (Cheery)', '235. 5PM (Cheery)', '236. 6PM (Cheery)', '237. 7PM (Cheery)',
+                    '238. 8PM (Cheery)', '239. 9PM (Cheery)', '240. 10PM (Cheery)', '241. 11PM (Cheery)',
+                ]
+            };
+
+            return parseBgmList(bgm[weather], dir);
+        }
+
+        function parseBgmList(bgmList, dir) {
+            return $.map(bgmList, function (value) {
+                return (dir + value + '.mp3').replace(' ', '%20');
+            });
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
