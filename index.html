@@ -63,10 +63,13 @@
                                         <option value="new_horizon">Animal Crossing New Horizon</option>
                                         <option value="new_horizon_rainy">Animal Crossing New Horizon (Rain)</option>
                                         <option value="new_horizon_snowy">Animal Crossing New Horizon (Snow)</option>
-                                        <option value="new_horizon_island">Animal Crossing New Horizon : Island Tour</option>
-                                        <option value="new_horizon_island_rainy">Animal Crossing New Horizon : Island Tour (Rain)
+                                        <option value="new_horizon_island">Animal Crossing New Horizon : Island Tour
                                         </option>
-                                        <option value="new_horizon_island_snowy">Animal Crossing New Horizon : Island Tour (Snow)
+                                        <option value="new_horizon_island_rainy">Animal Crossing New Horizon : Island
+                                            Tour (Rain)
+                                        </option>
+                                        <option value="new_horizon_island_snowy">Animal Crossing New Horizon : Island
+                                            Tour (Snow)
                                         </option>
                                         <option value="new_leaf">Animal Crossing New Leaf</option>
                                         <option value="new_leaf_rainy">Animal Crossing New Leaf (Rain)</option>
@@ -189,7 +192,8 @@
         //  MAIN
         // =============================================================================================== //
 
-        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
+            window.location.toString().indexOf('?pc_version') === -1) {
             // ios
             initPlayerIOS();
             $player_div.remove();
